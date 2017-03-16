@@ -1,0 +1,14 @@
+
+
+
+<form name="form" ng-submit="question(vm)" role="form" method="POST">
+			<div><h3>Enter Your Question:</h3><br><hr>
+					<textarea type="text" name="question" id="question" class="form-control" ng-model="vm.question" required></textarea>
+
+				</div><br><hr>
+                 <div class="form-actions">
+					 <button type="submit" onclick="alert('Post Question Success')" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Post Your Question</button>
+        	</div>
+</form>		
+					
+			

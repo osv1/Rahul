@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title>Smartanswers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./lib/bootstrap.min.css">
+<link rel="stylesheet" href="smart.css">
+<link rel="stylesheet" href="angular-toastr.css">
+ <script src="./lib/jquery.min.js"></script>
+  <script src="./lib/bootstrap.min.js"></script>
+ <script src="./lib/angular.min.js"></script>
+<!--  <script src="/bower_components/angular/angular.js"></script> -->
+
+  <script src="./lib/angular-toastr.js"></script>
+
+  <script src="./lib/angular-messages.js"></script>
+
+    <!-- <script src="https://unpkg.com/angular-toastr/dist/angular-toastr.tpls.js"></script> -->
+  <script src="./lib/dirPagination.js"></script>
+  <script src="./lib/ng-table.min.js"></script>
+<script src="./lib/angular-resource.min.js"></script>
+  <script src="./lib/angular-ui-router.js"></script>
+  <script src="app.js"></script>
+
+
+  </head>
+<body >
+
+<div ui-view="header"></div>
+<!-- <div data-role="header" data-position="fixed">
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <a class="navbar-brand" ui-sref="Smartanswers">Smartanswers</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="about">About</a></li>
+        <li><a ui-sref="tour">Vender List</a></li>
+     
+
+        <li><a ui-sref="topquestion">Top Question</a></li>
+         <li><a ui-sref="help">Help</a></li>
+
+         <li><a ui-sref="contact">Contact</a></li>
+
+      </ul>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+     
+        <li><a ui-sref="login">Login</a></li>
+        <li><a ui-sref="register">Signup</a></li>
+      </ul>
+    </div>
+  </div>
+   </nav>
+</div> -->
+
+
+ 
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a ui-sref="askquestions">Ask Question</a></p>
+      <p><a ui-sref="documentation">Documentation</a></p>
+    </div>
+
+   
+
+
+    <div class="col-sm-8 text-left"> 
+      
+     <div ui-view ></div>
+ <div ui-view="content"></div>
+     
+      
+    </div>
+
+
+
+
+
+
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p></p>
+      </div>
+      <div class="well">
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <footer class="container-fluid text-center">
+  <p>© Copyright 2017. All Rights Reserved.</p>
+</footer>
+ -->
+<div ui-view="footer"></div>
+
+</body>
+</html>

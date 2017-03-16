@@ -1,0 +1,78 @@
+<div   ng-init="getauser()"> 
+     
+<div class="container">
+      <div class="row">
+      <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+          
+        
+
+       <br>
+<p class=" text-info">March 16,2017 </p>
+      </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{users.firstName}} {{ users.lastName }}</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://icons.iconarchive.com/icons/icons-land/vista-people/128/Office-Customer-Male-Light-icon.png" class="img-circle img-responsive" class="img-circle img-responsive"> 
+
+                </div>
+
+
+
+
+                
+                
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td> First Name:</td>
+                        <td>{{users.firstName}}</td>
+                      </tr>
+                      <tr>
+                        <td>Last Name:</td>
+                        <td>{{ users.lastName }}</td>
+                      </tr>
+                      <tr>
+                        <td>Password</td>
+                        <td>{{users.password}}</td>
+                      </tr>
+                   
+                         <tr>
+                         <td>Phone Number</td>
+                        <td>{{users.phone}}<br>
+                        </td>
+                             
+                        
+                      <tr>
+                        <td>Email</td>
+                        <td><a href="mailto:info@support.com">{{users.email}}</a></td>
+                      </tr>
+                        
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+                  
+                  <a onclick="alert('You have no activity.')" class="btn btn-primary">My Activity </a>
+                 
+                
+                     <button class="btn btn-primary"  ng-controller="tourController" ng-click="editUser()">Update Profile</button>
+                     
+                </div>
+              </div>
+            </div>
+                 
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+</div>
