@@ -1,0 +1,28 @@
+<h3>Documentation ?</h3>
+<hr>
+<form>
+	
+	<h4>Pick a topic:</h4>
+	<input type="radio" ng-model="myVar" value="mean">Mean Stack
+	<input type="radio" ng-model="myVar" value="android">Android
+	
+</form>
+<hr>
+<div ng-switch="myVar">
+	<div ng-switch-when="mean">
+		<a ui-sref=".angularjs" class="btn btn-primary">Getting started with Mean Stack</a>
+		<hr>
+		<div class="col-sm-12 text-left">
+			
+			<div ui-view ></div>
+			<!--  <div ui-view="content"></div> -->
+		</div></div>
+		
+	</div>
+	<div ng-switch="myVar">
+		<div ng-switch-when="android">
+
+			<h4> <a href="http://stackoverflow.com/documentation/android/85/getting-started-with-android" class="btn btn-primary">Getting started with Android
+			</a></h4>
+		</div>
+	</div>
