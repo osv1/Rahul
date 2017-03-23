@@ -1,0 +1,19 @@
+<toaster-container toaster-options="{'time-out': 7000}"></toaster-container>
+<div ng-app="app" ng-controller="tourController">
+	<div>
+		<input type="text" ng-model="users.questionw" ng-show="profile.editable">
+		<span style="font-size: 30px;" ng-hide="profile.editable">{{ user.questionw }}</span>
+	</div>
+</div>
+<hr><br>
+<br>
+<div ng-controller="askController">
+	<form name="form" ng-submit="postanswer(user._id,answer)" role="form" method="POST">
+		<div><br>
+			<textarea type="text" rows="10" name="postanswer" id="postanswer" class="form-control" ng-model="answer" required></textarea>
+		</div><br><hr>
+		<div class="form-actions">
+			<button type="submit" onclick="alert('Post Answers Success')" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Post Your Answer</button>
+		</div>
+	</form><hr>
+</div>
