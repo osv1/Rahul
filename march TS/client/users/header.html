@@ -1,0 +1,31 @@
+<div  ng-controller="askController" ng-init="getauser()">
+  <header ng-controller="myController">
+    <div data-role="header">
+      <nav class="navbar navbar-inverse navbar-fixed">
+        <div class="container-fluid">
+          <div class="navbar-header">
+          <a class="navbar-brand" ui-sref="homeprivate" ng-if="!isuserlogin && !isadminlogin">Smartanswers</a>
+            <a class="navbar-brand" ng-if="isuserlogin">Smartanswers</a>
+            
+            <center><a class="navbar-brand"  ui-sref="Smartanswers" ng-if="isadminlogin">Dashboard</a></center>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav" ng-if="!isadminlogin">
+              <li><a ui-sref="topquestion" ng-if="isuserlogin">Top Question</a></li>
+              <li><a ui-sref="about">About</a></li>
+              <li><a ui-sref="help">Help</a></li>
+              <li><a ui-sref="contact">Contact Us</a></li>
+            </ul>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a ui-sref="login" ng-if="!isuserlogin && !isadminlogin" >Login</a></li>
+            <li><a  ng-click="logout()" ng-if="isuserlogin||isadminlogin">Logout</a></li>
+            <li><a ui-sref="welcome" ng-if="isuserlogin"> Welcome {{users.firstName}} </a></li>
+            
+            <li><a ui-sref="register" ng-if="!isuserlogin && !isadminlogin" >Signup</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
