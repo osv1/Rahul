@@ -1,0 +1,40 @@
+<html ng-app="App">
+
+  <head>
+    <link rel="stylesheet" href="table.css">
+    
+      <script src = "/home/rahulgupta/DayUsers/angular/angular.min.js"></script>
+      <script src= "/home/rahulgupta/DayUsers/angular/table.js"></script>
+    
+    
+
+  </head>
+
+  <body>
+  <div ng-controller="CrudCtrl">
+    <table>
+      <tr>
+        <td>Name</td>
+        <td>Country</td>
+        <td><span ng-click="add()">Add New</span></td>
+      </tr>
+      <tr ng-repeat="profile in Profiles">
+        <td>
+          <input type="text" ng-model="profile.name" ng-show="profile.editable">
+          <span ng-hide="profile.editable">{{ profile.name }}</span>
+        </td>
+        <td>
+          <input type="text" ng-model="profile.country" ng-show="profile.editable">
+          <span ng-hide="profile.editable">{{ profile.country }}</span>
+        </td>
+        <td>
+          <span ng-click="edit($index)" ng-hide="profile.editable">Edit</span>
+          <span ng-click="save($index)" ng-show="profile.editable">Save</span>
+          <span ng-click="delete($index)"> | Delete</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  </body>
+
+</html>

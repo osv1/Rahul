@@ -1,0 +1,21 @@
+<h2>What is Your Question? Please Ask.</h2><br><form name="form" ng-submit="questionw(vms)" role="form" method="POST">
+	<div class="form-group" ng-class="{ 'has-error': form.title.$dirty && form.title.$error.required }">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" class="form-control" placeholder="What is your programming question? Be specific." ng-model="vms.title" required =""/>
+             <div ng-messages="form.title.$error" ng-show="form.title.$dirty" >
+             <div ng-message="required">Title is required</div>
+             
+        </div>
+        </div>
+	<div><label for="questionw">Your Question</label>
+		<textarea  rows="10" type="text" name="questionw" id="questionw" placeholder="please describe your question in details..." class="form-control" ng-model="vms.questionw" required></textarea>
+	</div><br><hr>
+	
+	<div class="form-actions">
+		<button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Post Your Question</button>
+	</div>
+</form>
+<br/>
+<br/>
+
+

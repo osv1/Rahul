@@ -1,0 +1,28 @@
+<toaster-container toaster-options="{'time-out': 7000}"></toaster-container>
+<div ng-app="app" ng-init="showQA()" ng-controller="tourController">
+	<div>
+		<span style="font-size: 20px;" >
+			<div ng-repeat="user in users"><br>
+				<p>{{user.title}}</p></span><hr>
+				<span style="font-size: 15px;" ><p>{{ user.questionw}}</p></span><br>
+				<hr>
+				<span style="font-size: 15px;" >
+					<div ng-repeat="ans in user.answer"><p><b>Answer:&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ans.answer}}<!-- button>gg</button> --></p></div>
+				</span>
+				<hr>
+				<p><h4>Can you help? Smartanswers depends on everyone sharing their knowledge. If you're able to answer this question, please do!</h4>
+					<br>
+				<h4>Your Answer</h4></p>
+				<div ng-controller="askController">
+					<form name="form" ng-submit="postanswer(user._id,answer)" role="form" method="POST">
+						<div>
+							<textarea type="text" rows="10" name="postanswer" id="postanswer" class="form-control" ng-model="answer" required></textarea>
+						</div><br><hr>
+						<div class="form-actions">
+							<button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Post Your Answer</button>
+						</div>
+					</form><hr>
+				</div>
+			</div>
+		</div>
+	</div>
